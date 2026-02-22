@@ -647,6 +647,27 @@
   margin-top: 32px;
 }
 
+.menu__flavors {
+  background-color: var(--color-cream);
+  border-radius: 12px;
+  padding: 24px;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.menu__flavors-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  color: var(--color-brown);
+  margin-bottom: 12px;
+}
+
+.menu__flavors-list {
+  font-size: 0.95rem;
+  color: var(--color-text);
+  line-height: 1.8;
+}
+
 @media (max-width: 768px) {
   .menu {
     padding: 80px 0;
@@ -741,6 +762,29 @@
 .location__card-content a {
   color: var(--color-primary);
   font-weight: 500;
+}
+
+.location__social-links {
+  display: flex;
+  gap: 16px;
+  margin-top: 8px;
+}
+
+.location__social-links a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-primary);
+  transition: opacity 0.2s;
+}
+
+.location__social-links a:hover {
+  opacity: 0.7;
+}
+
+.location__social-links svg {
+  width: 28px;
+  height: 28px;
 }
 
 .location__hours-row {

@@ -3,8 +3,6 @@ import {
   Coffee,
   MapPin,
   Clock,
-  Phone,
-  Mail,
   Instagram,
   Facebook,
   Menu as MenuIcon,
@@ -12,10 +10,10 @@ import {
   ChevronDown,
   Heart,
   Leaf,
-  Users,
-  Send
+  Users
 } from 'lucide-react';
 import './App.css';
+import coffeeShopImg from './coffee-shop.png';
 
 // Navigation Component
 function Navbar() {
@@ -35,7 +33,7 @@ function Navbar() {
     { href: '#about', label: 'About' },
     { href: '#menu', label: 'Menu' },
     { href: '#location', label: 'Visit Us' },
-    { href: '#contact', label: 'Contact' }
+    // { href: '#contact', label: 'Contact' }
   ];
 
   return (
@@ -153,10 +151,7 @@ function About() {
           </div>
 
           <div className="about__image">
-            <div className="about__image-placeholder">
-              <Coffee size={64} />
-              <span>Crafted with Care</span>
-            </div>
+            <img src={coffeeShopImg} alt="Eagle Nest Coffee Co. shop" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '12px' }} />
           </div>
         </div>
 
@@ -181,46 +176,59 @@ function About() {
 function MenuSection() {
   const menuCategories = [
     {
-      name: 'Espresso Drinks',
+      name: 'Lattes',
       items: [
-        { name: 'Espresso', description: 'Rich, bold, and perfectly pulled', price: '$3.50', size: 'Single' },
-        { name: 'Double Espresso', description: 'Twice the intensity', price: '$4.50', size: 'Double' },
-        { name: 'Americano', description: 'Espresso with hot water, smooth and satisfying', price: '$4.00', size: '12oz' },
-        { name: 'Cappuccino', description: 'Equal parts espresso, steamed milk, and velvety foam', price: '$5.00', size: '8oz' },
-        { name: 'Latte', description: 'Espresso with silky steamed milk', price: '$5.50', size: '12oz' },
-        { name: 'Flat White', description: 'Velvety microfoam with a double shot', price: '$5.50', size: '8oz' },
-        { name: 'Mocha', description: 'Espresso, chocolate, and steamed milk', price: '$6.00', size: '12oz' },
-        { name: 'Macchiato', description: 'Espresso marked with a dollop of foam', price: '$4.00', size: 'Single' }
+        { name: 'Eagle Nest Latte', description: 'White Chocolate, Coconut, Toasted Marshmallow, Signature Nest', price: 'R $6.50 / Lg $7.50', size: '16oz/20oz' },
+        { name: 'Royal Eagle', description: 'Banana, Dulce De Leche', price: 'R $5.50 / Lg $6.50', size: '16oz/20oz' },
+        { name: 'Scout Latte', description: 'Dark Chocolate, Salted Caramel, Coconut', price: 'R $5.50 / Lg $6.50', size: '16oz/20oz' },
+        { name: 'Love Bird', description: 'Raspberry, Dark Chocolate, Cold Foam', price: 'R $6.50 / Lg $7.50', size: '16oz/20oz' },
+        { name: 'Cinnamon Swirl', description: 'Cinnamon Bun, White Chocolate', price: 'R $5.50 / Lg $6.50', size: '16oz/20oz' },
+        { name: 'Yin Yang Latte', description: 'White Chocolate, Dark Chocolate', price: 'R $5.50 / Lg $6.50', size: '16oz/20oz' },
+        { name: 'Strawberries & Cream', description: 'Strawberry, Vanilla, Cold Foam', price: 'R $6.50 / Lg $7.50', size: '16oz/20oz' }
       ]
     },
     {
-      name: 'Cold Beverages',
+      name: 'Matcha',
       items: [
-        { name: 'Cold Brew', description: 'Slow-steeped for 18 hours, naturally sweet', price: '$5.00', size: '16oz' },
-        { name: 'Iced Latte', description: 'Espresso over ice with cold milk', price: '$5.50', size: '16oz' },
-        { name: 'Iced Americano', description: 'Espresso with cold water over ice', price: '$4.50', size: '16oz' },
-        { name: 'Nitro Cold Brew', description: 'Silky smooth, infused with nitrogen', price: '$6.00', size: '16oz' },
-        { name: 'Iced Mocha', description: 'Chocolate, espresso, and cold milk over ice', price: '$6.50', size: '16oz' }
+        { name: 'Fruity Pebble Matcha', description: 'Vanilla, Lavender Cold Foam', price: 'R $6 / Lg $7', size: '16oz/20oz' },
+        { name: 'The Forager', description: 'Strawberry, Blueberry Cold Foam', price: 'R $6 / Lg $7', size: '16oz/20oz' }
       ]
     },
     {
-      name: 'Specialty & Seasonal',
+      name: 'Drip Coffee & Frappé',
       items: [
-        { name: 'Honey Lavender Latte', description: 'Local honey, lavender, and espresso', price: '$6.50', size: '12oz' },
-        { name: 'Vanilla Bean Latte', description: 'Real vanilla bean with steamed milk', price: '$6.00', size: '12oz' },
-        { name: 'Maple Oat Latte', description: 'Maple syrup with oat milk', price: '$6.50', size: '12oz' },
-        { name: 'Affogato', description: 'Espresso poured over vanilla gelato', price: '$7.00', size: 'Single' }
+        { name: 'Drip Coffee', description: 'Freshly brewed drip coffee', price: 'R $3.50 / Lg $4.50', size: '16oz/20oz' },
+        { name: 'Vanilla Frappé', description: 'Blended vanilla frappé', price: 'Lg $7', size: '20oz' },
+        { name: 'Caramel Frappé', description: 'Blended caramel frappé', price: 'Lg $7', size: '20oz' },
+        { name: 'Mocha Frappé', description: 'Blended mocha frappé', price: 'Lg $7', size: '20oz' },
+        { name: 'White Chocolate Frappé', description: 'Blended white chocolate frappé', price: 'Lg $7', size: '20oz' }
       ]
     },
     {
-      name: 'Non-Coffee',
+      name: 'Eaglet Menu',
       items: [
-        { name: 'Hot Chocolate', description: 'Rich Belgian chocolate with steamed milk', price: '$4.50', size: '12oz' },
-        { name: 'Chai Latte', description: 'Spiced chai with steamed milk', price: '$5.00', size: '12oz' },
-        { name: 'Matcha Latte', description: 'Ceremonial grade matcha with steamed milk', price: '$5.50', size: '12oz' },
-        { name: 'London Fog', description: 'Earl Grey, vanilla, and steamed milk', price: '$5.00', size: '12oz' }
+        { name: 'Dirty Soda', description: 'For our younger guests', price: '$4', size: '' },
+        { name: 'Mixed Lemonade', description: 'Refreshing lemonade blend', price: '$4', size: '' },
+        { name: 'Banana Smoothie', description: 'Creamy banana smoothie', price: '$5', size: '' }
+      ]
+    },
+    {
+      name: 'Add-Ons & Flavors',
+      items: [
+        { name: 'Extra Sweet', description: 'Add extra sweetness to any drink', price: '+$1', size: '' },
+        { name: 'Extra Espresso Shot', description: 'Add an extra shot of espresso', price: '+$1', size: '' },
+        { name: 'Add Cold Foam', description: 'Add cold foam to any coffee', price: '+$1', size: '' },
+        { name: 'Add a Nest', description: 'Marshmallow rim with toasted coconut flakes', price: '+$2', size: '' },
+        { name: 'Oat or Almond Milk', description: 'Substitute with oat or almond milk', price: '+50¢', size: '' }
       ]
     }
+  ];
+
+  const flavors = [
+    'Vanilla', 'Dark Chocolate', 'Toasted Marshmallow', 'Lavender Hazelnut',
+    'White Chocolate', 'Brown Sugar Cinnamon', 'Banana', 'French Vanilla',
+    'Dulce de Leche', 'Salted Caramel', 'Peach', 'Raspberry', 'Blueberry',
+    'Strawberry', 'Milk Chocolate', 'Coconut'
   ];
 
   const [activeCategory, setActiveCategory] = useState(0);
@@ -254,7 +262,7 @@ function MenuSection() {
               <div className="menu-item__info">
                 <div className="menu-item__header">
                   <h3 className="menu-item__name">{item.name}</h3>
-                  <span className="menu-item__size">{item.size}</span>
+                  {item.size && <span className="menu-item__size">{item.size}</span>}
                 </div>
                 <p className="menu-item__description">{item.description}</p>
               </div>
@@ -263,8 +271,13 @@ function MenuSection() {
           ))}
         </div>
 
+        <div className="menu__flavors">
+          <h3 className="menu__flavors-title">Available Flavors</h3>
+          <p className="menu__flavors-list">{flavors.join(', ')}</p>
+        </div>
+
         <p className="menu__note">
-          All drinks available with oat, almond, or coconut milk (+$0.75)
+          Sizes: Regular 16oz | Large 20oz
         </p>
       </div>
     </section>
@@ -274,9 +287,8 @@ function MenuSection() {
 // Location Section
 function Location() {
   const hours = [
-    { day: 'Monday - Friday', time: '7:00 AM - 7:00 PM' },
-    { day: 'Saturday', time: '8:00 AM - 8:00 PM' },
-    { day: 'Sunday', time: '8:00 AM - 6:00 PM' }
+    { day: 'Monday - Friday', time: '7:00 AM - 4:00 PM' },
+    { day: 'Saturday', time: '8:00 AM - 2:00 PM' }
   ];
 
   return (
@@ -322,13 +334,18 @@ function Location() {
 
             <div className="location__card">
               <div className="location__card-icon">
-                <Phone />
+                <Instagram />
               </div>
               <div className="location__card-content">
-                <h3>Contact</h3>
-                <p>
-                  <a href="tel:+15035551234">(503) 555-1234</a>
-                </p>
+                <h3>Follow Us</h3>
+                <div className="location__social-links">
+                  <a href="https://www.facebook.com/share/1GdohpAc7G/?mibextid=wwXIfr" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <Facebook />
+                  </a>
+                  <a href="https://www.instagram.com/eaglenestcoffee?igsh=MXI1OXQzNGt4MHJ0bg%3D%3D&utm_source=qr" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <Instagram />
+                  </a>
+                </div>
               </div>
             </div>
           </div>
@@ -344,126 +361,6 @@ function Location() {
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
             ></iframe>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-}
-
-// Contact Section
-function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData((prev) => ({ ...prev, [name]: value }));
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // In a real app, you would send this data to a server
-    console.log('Form submitted:', formData);
-    setIsSubmitted(true);
-    setFormData({ name: '', email: '', message: '' });
-
-    // Reset success message after 5 seconds
-    setTimeout(() => setIsSubmitted(false), 5000);
-  };
-
-  return (
-    <section id="contact" className="contact">
-      <div className="container">
-        <div className="contact__header">
-          <span className="section-label">Get in Touch</span>
-          <h2 className="section-title">Contact Us</h2>
-          <p className="section-subtitle">
-            Questions, feedback, or just want to say hello? We'd love to hear from you.
-          </p>
-        </div>
-
-        <div className="contact__content">
-          <form className="contact__form" onSubmit={handleSubmit}>
-            {isSubmitted && (
-              <div className="contact__success">
-                Thank you for your message! We'll get back to you soon.
-              </div>
-            )}
-
-            <div className="contact__form-group">
-              <label htmlFor="name">Your Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                value={formData.name}
-                onChange={handleChange}
-                placeholder="John Doe"
-                required
-              />
-            </div>
-
-            <div className="contact__form-group">
-              <label htmlFor="email">Email Address</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                value={formData.email}
-                onChange={handleChange}
-                placeholder="john@example.com"
-                required
-              />
-            </div>
-
-            <div className="contact__form-group">
-              <label htmlFor="message">Your Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Tell us what's on your mind..."
-                rows="5"
-                required
-              ></textarea>
-            </div>
-
-            <button type="submit" className="btn btn--primary btn--full">
-              <Send size={18} />
-              Send Message
-            </button>
-          </form>
-
-          <div className="contact__info">
-            <div className="contact__info-card">
-              <h3>Other Ways to Reach Us</h3>
-              <div className="contact__info-item">
-                <Mail />
-                <a href="mailto:hello@eaglenestcoffee.com">hello@eaglenestcoffee.com</a>
-              </div>
-              <div className="contact__info-item">
-                <Phone />
-                <a href="tel:+15035551234">(503) 555-1234</a>
-              </div>
-            </div>
-
-            <div className="contact__social">
-              <h3>Follow Our Journey</h3>
-              <div className="contact__social-links">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
-                  <Instagram />
-                </a>
-                <a href="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
-                  <Facebook />
-                </a>
-              </div>
-            </div>
           </div>
         </div>
       </div>
@@ -492,14 +389,13 @@ function Footer() {
               <li><a href="#about">About Us</a></li>
               <li><a href="#menu">Menu</a></li>
               <li><a href="#location">Visit Us</a></li>
-              <li><a href="#contact">Contact</a></li>
+              {/* <li><a href="#contact">Contact</a></li> */}
             </ul>
           </div>
 
           <div className="footer__contact">
             <h4>Contact</h4>
             <p>10218 US-41<br />Monteagle, TN 37356</p>
-            <p><a href="tel:+15035551234">(503) 555-1234</a></p>
             <p><a href="mailto:hello@eaglenestcoffee.com">hello@eaglenestcoffee.com</a></p>
           </div>
         </div>
@@ -522,7 +418,7 @@ function App() {
         <About />
         <MenuSection />
         <Location />
-        <Contact />
+        {/* <Contact /> */}
       </main>
       <Footer />
     </div>
