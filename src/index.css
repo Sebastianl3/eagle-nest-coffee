@@ -1,17 +1,19 @@
 /* CSS Variables for Color Palette */
 :root {
-  --color-primary: #6B9E9E;
-  --color-primary-dark: #5A8A8A;
-  --color-primary-light: #8BB5B5;
-  --color-accent: #C4654F;
-  --color-accent-dark: #A85441;
-  --color-accent-light: #D4806C;
-  --color-cream: #FAF8F5;
-  --color-cream-dark: #F0EDE8;
-  --color-brown: #3D2B1F;
-  --color-brown-light: #5C4333;
-  --color-text: #2C2C2C;
-  --color-text-light: #666666;
+  --color-primary: #2E8B74;
+  --color-primary-dark: #1E6B57;
+  --color-primary-light: #4DAD93;
+  --color-accent: #D4511A;
+  --color-accent-dark: #B03F10;
+  --color-accent-light: #E86E38;
+  --color-gold: #C8921A;
+  --color-gold-light: #E8B040;
+  --color-cream: #FDF5E4;
+  --color-cream-dark: #F5E8C8;
+  --color-brown: #3D1A06;
+  --color-brown-light: #6B3318;
+  --color-text: #2C1A0E;
+  --color-text-light: #7A5C44;
   --color-white: #FFFFFF;
 
   --font-serif: 'Playfair Display', Georgia, serif;

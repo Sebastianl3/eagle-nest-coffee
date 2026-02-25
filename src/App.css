@@ -57,7 +57,7 @@
   font-weight: 500;
   letter-spacing: 2px;
   text-transform: uppercase;
-  color: var(--color-accent);
+  color: var(--color-gold);
   margin-bottom: 12px;
 }
 
@@ -281,7 +281,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(135deg, var(--color-brown) 0%, var(--color-brown-light) 20%, var(--color-primary) 55%, var(--color-primary-dark) 100%);
+  background: linear-gradient(135deg, var(--color-brown) 0%, var(--color-primary-dark) 35%, var(--color-primary) 65%, var(--color-accent) 100%);
 }
 
 .hero__overlay {
@@ -290,8 +290,8 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background: radial-gradient(circle at 30% 70%, rgba(107, 158, 158, 0.2) 0%, transparent 50%),
-              radial-gradient(circle at 70% 30%, rgba(196, 101, 79, 0.15) 0%, transparent 50%);
+  background: radial-gradient(circle at 20% 80%, rgba(200, 146, 26, 0.25) 0%, transparent 50%),
+              radial-gradient(circle at 80% 20%, rgba(212, 81, 26, 0.2) 0%, transparent 50%);
 }
 
 .hero__content {
@@ -393,6 +393,8 @@
 .about {
   padding: 120px 0;
   background-color: var(--color-cream);
+  background-image: radial-gradient(circle at 90% 10%, rgba(46, 139, 116, 0.08) 0%, transparent 50%),
+                    radial-gradient(circle at 10% 90%, rgba(200, 146, 26, 0.08) 0%, transparent 50%);
 }
 
 .about__header {
@@ -474,13 +476,24 @@
 .value-card__icon {
   width: 56px;
   height: 56px;
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 0 auto 20px;
   color: var(--color-white);
+}
+
+.value-card:nth-child(1) .value-card__icon {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+}
+
+.value-card:nth-child(2) .value-card__icon {
+  background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent) 100%);
+}
+
+.value-card:nth-child(3) .value-card__icon {
+  background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 100%);
 }
 
 .value-card__title {
@@ -532,6 +545,7 @@
 .menu {
   padding: 120px 0;
   background-color: var(--color-cream-dark);
+  background-image: radial-gradient(circle at 95% 50%, rgba(212, 81, 26, 0.07) 0%, transparent 40%);
 }
 
 .menu__header {
@@ -598,6 +612,7 @@
 .menu-item:hover {
   transform: translateX(8px);
   box-shadow: var(--shadow-md);
+  border-left: 4px solid var(--color-accent);
 }
 
 .menu-item__info {
@@ -648,11 +663,12 @@
 }
 
 .menu__flavors {
-  background-color: var(--color-cream);
+  background: linear-gradient(135deg, var(--color-cream) 0%, var(--color-cream-dark) 100%);
   border-radius: 12px;
   padding: 24px;
   margin-top: 40px;
   text-align: center;
+  border: 2px solid var(--color-gold-light);
 }
 
 .menu__flavors-title {
@@ -699,6 +715,7 @@
 .location {
   padding: 120px 0;
   background-color: var(--color-cream);
+  background-image: radial-gradient(circle at 5% 50%, rgba(46, 139, 116, 0.1) 0%, transparent 40%);
 }
 
 .location__header {
@@ -736,13 +753,24 @@
 .location__card-icon {
   width: 48px;
   height: 48px;
-  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-white);
   flex-shrink: 0;
+}
+
+.location__card:nth-child(1) .location__card-icon {
+  background: linear-gradient(135deg, var(--color-primary-light) 0%, var(--color-primary) 100%);
+}
+
+.location__card:nth-child(2) .location__card-icon {
+  background: linear-gradient(135deg, var(--color-gold-light) 0%, var(--color-gold) 100%);
+}
+
+.location__card:nth-child(3) .location__card-icon {
+  background: linear-gradient(135deg, var(--color-accent-light) 0%, var(--color-accent) 100%);
 }
 
 .location__card-content h3 {
@@ -1024,6 +1052,7 @@
   background-color: var(--color-brown);
   color: var(--color-white);
   padding: 80px 0 32px;
+  border-top: 5px solid var(--color-primary);
 }
 
 .footer__content {
@@ -1075,7 +1104,7 @@
 }
 
 .footer__links a:hover {
-  color: var(--color-primary-light);
+  color: var(--color-gold-light);
 }
 
 .footer__contact p {
@@ -1090,7 +1119,7 @@
 }
 
 .footer__contact a:hover {
-  color: var(--color-primary-light);
+  color: var(--color-gold-light);
 }
 
 .footer__bottom {
